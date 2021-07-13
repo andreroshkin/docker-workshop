@@ -29,7 +29,6 @@ export class CrudController<T extends CrudEntity> {
     async insert(@Body() entity: T, @Res() res: Response): Promise<any> {
         const response = await this.crudService.insert(entity)
         return response
-        // return res.status(response.status).send(response)
     }
 
     @Put()
@@ -38,7 +37,6 @@ export class CrudController<T extends CrudEntity> {
     async update(@Param('id') id: number, @Body() data: T, @Res() res: Response): Promise<any> {
         const response = await this.crudService.update(id, data)
         return response
-        // return res.status(response.status).send(response)
     }
 
     @Delete(':id')

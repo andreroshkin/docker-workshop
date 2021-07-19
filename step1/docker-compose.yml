@@ -37,7 +37,7 @@ services:
       - /usr/src/app/node_modules
     restart: unless-stopped
 
-# Сеть Docker виспользуется для установления связи между контейнерами Docker и внешним миром через хост-машину
+# Сеть Docker используется для установления связи между контейнерами Docker и внешним миром через хост-машину
 networks:
   app-network:
 
